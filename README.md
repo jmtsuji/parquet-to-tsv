@@ -17,11 +17,11 @@ conda activate parquet-to-tsv
 
 git clone https://github.com/jmtsuji/parquet-to-tsv.git
 cd parquet-to-tsv
-parquet-to-tsv.py -h # a help message should appear
+./parquet-to-tsv.py -h # a help message should appear
 ```
 
 Usage:
 ```bash
 # Substitute the text in brackets with the path to your input file and the desired path to your output file
-parquet-to-tsv.py -i [input_file.parquet] -o [output_file.tsv]
+./parquet-to-tsv.py -i [input_file.parquet] -o [output_file.tsv]
 ```
