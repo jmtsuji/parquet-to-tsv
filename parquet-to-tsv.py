@@ -29,10 +29,6 @@ def main():
     stream_handler.setFormatter(formatter)
     logger.addHandler(stream_handler)
 
-    if (hasattr(args, 'version')) and (args.version is True):
-        print(f'Version: {VERSION}')
-        sys.exit(0)
-
     if (hasattr(args, 'verbose')) and (args.verbose is True):
         logger.setLevel(logging.DEBUG)
     else:
