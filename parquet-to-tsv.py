@@ -16,18 +16,12 @@ VERSION = '0.1.0'
 
 def main():
     """
-    Collects input arguments and selects a command to perform.
-    """
-
-    """
-    When installing through pip with pyprojects.toml a new python script is generated
-    that calls main() out of ampliwrangler.py. Run parser inside main() so it can be called 
-    externally as a function.
+    Collects input arguments and performs the parquet load and save
     """
     parser = parse_cli()
     args = parser.parse_args()
 
-    # Initialize the root logger with a stream handler
+    # Initialize the logger
     logger = logging.getLogger()
     formatter = logging.Formatter('[ %(asctime)s ]: %(levelname)s: %(filename)s: %(funcName)s: %(message)s',
                                   datefmt='%Y-%m-%d %H:%M:%S')
